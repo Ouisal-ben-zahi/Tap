@@ -89,6 +89,11 @@
 
 }
 
+/* Boutons dans le menu (visibles uniquement en mobile) */
+.nav-buttons-mobile {
+  display: none;
+}
+
 /* Hamburger */
 .hamburger {
   display: none;
@@ -127,6 +132,20 @@
 
   .header-buttons {
     display: none;
+  }
+
+  .nav-buttons-mobile {
+    display: flex !important;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 20px 0;
+    width: 100%;
+  }
+
+  .nav-buttons-mobile .login-btn,
+  .nav-buttons-mobile .signup-btn {
+    width: 100%;
+    text-align: center;
   }
 
   .hamburger {

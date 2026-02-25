@@ -58,9 +58,22 @@ const Header = () => {
             </li>
 
           </ul>
+
+          {/* Boutons visibles en mobile dans le menu */}
+          <div className="nav-buttons-mobile">
+            <button className="login-btn" onClick={() => setMenuOpen(false)}>
+              Se connecter
+            </button>
+            <button
+              className="signup-btn"
+              onClick={() => { setMenuOpen(false); navigate("/profil"); }}
+            >
+              Créer mon profil
+            </button>
+          </div>
         </nav>
 
-        {/* Buttons */}
+        {/* Buttons (desktop) */}
         <div className="header-buttons">
           <button className="login-btn">
             Se connecter

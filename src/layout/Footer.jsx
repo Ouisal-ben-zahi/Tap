@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/Footer.css";
 import logo from "../assets/logo.svg";
 
 const Footer = () => {
+  const [openColumn, setOpenColumn] = useState(null);
+
+  const toggleColumn = (id) => {
+    setOpenColumn((prev) => (prev === id ? null : id));
+  };
+
   return (
     <footer className="footer-container">
       <div className="footer-inner">
-        
         {/* Logo aligné en haut */}
         <div className="footer-brand">
           <img src={logo} alt="TAP" className="footer-logo" />
@@ -16,14 +21,15 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Ligne séparatrice centrée verticalement */}
         <div className="footer-divider"></div>
 
-        {/* Grille des menus alignée en haut */}
         <div className="footer-grid">
-          <div className="footer-column">
-            <h3>NAVIGATION</h3>
-            <ul>
+          <div className={`footer-column ${openColumn === "nav" ? "open" : ""}`}>
+            <button type="button" className="footer-column-header" onClick={() => toggleColumn("nav")}>
+              <h3>NAVIGATION</h3>
+              <span className="footer-column-arrow" aria-hidden>▼</span>
+            </button>
+            <ul className="footer-column-content">
               <li>Accueil</li>
               <li>Comment ça marche</li>
               <li>À propos</li>
@@ -33,9 +39,12 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="footer-column">
-            <h3>PRODUIT</h3>
-            <ul>
+          <div className={`footer-column ${openColumn === "prod" ? "open" : ""}`}>
+            <button type="button" className="footer-column-header" onClick={() => toggleColumn("prod")}>
+              <h3>PRODUIT</h3>
+              <span className="footer-column-arrow" aria-hidden>▼</span>
+            </button>
+            <ul className="footer-column-content">
               <li>Analyse IA du CV</li>
               <li>Score d'employabilité</li>
               <li>Micro-learning</li>
@@ -43,9 +52,12 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="footer-column">
-            <h3>LÉGAL</h3>
-            <ul>
+          <div className={`footer-column ${openColumn === "legal" ? "open" : ""}`}>
+            <button type="button" className="footer-column-header" onClick={() => toggleColumn("legal")}>
+              <h3>LÉGAL</h3>
+              <span className="footer-column-arrow" aria-hidden>▼</span>
+            </button>
+            <ul className="footer-column-content">
               <li>Mentions légales</li>
               <li>Politique de confidentialité</li>
               <li>Conditions d'utilisation</li>
@@ -53,23 +65,28 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="footer-column contact-column">
-            <h3>CONTACT</h3>
-            <div className="contact-block">
-              <strong>Email</strong>
-              <span>contact@tap.ai</span>
-            </div>
-            <div className="contact-block">
-              <strong>Téléphone</strong>
-              <span>+212 6 00 00 00 00</span>
-            </div>
-            <div className="contact-block">
-              <strong>Adresse</strong>
-              <span>Maroc</span>
-            </div>
-            <div className="contact-block">
-              <strong>Support</strong>
-              <span>support@tap.ai</span>
+          <div className={`footer-column contact-column ${openColumn === "contact" ? "open" : ""}`}>
+            <button type="button" className="footer-column-header" onClick={() => toggleColumn("contact")}>
+              <h3>CONTACT</h3>
+              <span className="footer-column-arrow" aria-hidden>▼</span>
+            </button>
+            <div className="footer-column-content">
+              <div className="contact-block">
+                <strong>Email</strong>
+                <span>contact@tap.ai</span>
+              </div>
+              <div className="contact-block">
+                <strong>Téléphone</strong>
+                <span>+212 6 00 00 00 00</span>
+              </div>
+              <div className="contact-block">
+                <strong>Adresse</strong>
+                <span>Maroc</span>
+              </div>
+              <div className="contact-block">
+                <strong>Support</strong>
+                <span>support@tap.ai</span>
+              </div>
             </div>
           </div>
         </div>
