@@ -1,14 +1,13 @@
 
 .main-section {
   width: 100%;
-  min-height: 100vh;
   background-color: #000;
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 80px 0;
+  padding: 48px 0;
   color: white;
 }
 
@@ -18,17 +17,17 @@
 }
 
 .main-title {
-  font-size: 2.2rem;
+  font-size: 28px;
   font-weight: 400;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
   letter-spacing: 1px;
 }
 
 .steps-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px 60px; /* Plus d'espace vertical entre les lignes */
-  margin-bottom: 80px;
+  gap: 24px 48px;
+  margin-bottom: 40px;
 }
 
 .step-item {
@@ -67,9 +66,9 @@
 }
 
 .cta-title {
-  font-size: 2rem;
+  font-size: 28px;
   font-weight: 400;
-  margin-bottom: 35px;
+  margin-bottom: 24px;
 }
 
 .button-group {

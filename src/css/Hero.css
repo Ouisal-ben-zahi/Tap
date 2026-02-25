@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;      /* centre le bloc de contenu */
-  padding: 140px 5% 60px;       /* espace pour laisser passer le header fixe */
+  padding: 140px 5% 40px;       /* espace pour laisser passer le header fixe */
   box-sizing: border-box;
 }
 
