@@ -1,0 +1,134 @@
+/* Header global */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background:#E6E6E6;
+  color: #000000;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Container */
+
+.header-container {
+  width: 90%;
+  margin: 0 auto; /* centre horizontalement */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+/* Logo */
+.logo img {
+  height: 50px;
+}
+
+/* Navigation */
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+.nav ul li {
+  cursor: pointer;
+  color: #000000;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+  display: inline-block; /* IMPORTANT */
+}
+
+
+
+
+.nav a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+/* Active link */
+.nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #CA1B28;
+}
+
+/* Buttons */
+.header-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.login-btn {
+  padding: 8px 18px;
+  border: 1px solid #000000;
+  background: transparent;
+  color: #000000;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.signup-btn {
+  padding: 8px 18px;
+  background-color: #CA1B28;
+  color: white;
+  border: none;
+  cursor: pointer;
+    font-size: 16px;
+
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive */
+
+
+@media (max-width: 768px) {
+
+  .nav ul {
+    flex-direction: column;
+    align-items: flex-start; /* ← align left */
+    gap: 20px;
+    padding-left: 20px;
+  }
+
+  .nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .nav.open {
+    display: block;
+  }
+
+
+
+
+  .header-buttons {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+}

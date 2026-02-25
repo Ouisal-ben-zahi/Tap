@@ -1,0 +1,110 @@
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;            /* occupe toute la hauteur de l’écran */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 140px 5% 60px;       /* espace pour laisser passer le header fixe */
+  box-sizing: border-box;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(202, 27, 40, 0.8), transparent 55%),
+              rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 900px;
+  color: #f5f5f5;
+  text-align: left;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 46px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  max-width: 520px;
+  margin-bottom: 40px;
+}
+
+.hero-cards {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.hero-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px 26px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  border: 1px solid #ca1b28;
+  min-width: 220px;
+}
+
+.hero-card-label {
+  width: 12px;
+  height: 12px;
+  background-color: #ca1b28;
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 60% 100%, 0 100%);
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 26px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.btn-primary {
+  background-color: #ca1b28;
+  color: #fff;
+  border: none;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #f5f5f5;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 110px 16px 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .hero-cards {
+    flex-direction: column;
+  }
+}
