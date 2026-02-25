@@ -13,11 +13,7 @@ const Hero = () => {
 
       <div className="hero-content">
         <h1>
-          LA PLATEFORME DE RECRUTEMENT
-          <br />
-          QUI TRANSFORME DES PROFILS
-          <br />
-          EN TALENTS PRÊTS À EMBAUCHER.
+          LA PLATEFORME DE RECRUTEMENT QUI TRANSFORME DES PROFILS EN TALENTS PRÊTS À EMBAUCHER.
         </h1>
 
         <p>

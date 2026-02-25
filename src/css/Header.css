@@ -12,12 +12,13 @@
 /* Container */
 
 .header-container {
-  width: 90%;
-  margin: 0 auto; /* centre horizontalement */
+  max-width: 1200px;           /* largeur max du contenu */
+  width: 90%;                  /* le contenu prend 90% de cette largeur max */
+  margin: 0 auto;              /* centre horizontalement */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 0;
+  padding: 15px 32px;          /* petit padding interne */
 }
 
 /* Logo */

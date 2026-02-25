@@ -7,7 +7,7 @@
   background-position: center;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;      /* centre le bloc de contenu */
   padding: 140px 5% 60px;       /* espace pour laisser passer le header fixe */
   box-sizing: border-box;
 }
@@ -21,7 +21,9 @@
 
 .hero-content {
   position: relative;
-  max-width: 1000px;
+  max-width: 1200px;            /* largeur max du contenu */
+  width: 100%;
+  margin: 0 auto;
   color: #f5f5f5;
   text-align: left;
   z-index: 2;
@@ -33,6 +35,8 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 24px;
+  font-weight: 400;
+  max-width: 770px;
 }
 
 .hero-content p {
