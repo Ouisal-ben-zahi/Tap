@@ -20,6 +20,11 @@ body {
   font-size: 1rem;
 }
 
+/* Tous les boutons des pages (espacement au-dessus) */
+.app-content button {
+  margin-top: 50px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
