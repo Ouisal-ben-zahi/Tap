@@ -85,7 +85,7 @@
 }
 
 .block-title {
-  padding: 12px 25px;
+  padding: 12px 50px;
   font-weight: 700;
   background-color: #e01f26;
   text-transform: uppercase;
@@ -93,7 +93,7 @@
 }
 
 .block-body {
-  padding: 30px 25px;
+  padding: 30px 50px;
   font-size: 0.9rem;
 }
 
@@ -103,7 +103,7 @@
 }
 
 .block-footer {
-  padding: 12px 25px;
+  padding: 12px 50px;
   background-color: #EDEDED;
   color: #000;
   text-transform: uppercase;
