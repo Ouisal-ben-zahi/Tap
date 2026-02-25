@@ -1,78 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-.main-container {
-  background-color: #000; /* Couleur de secours */
-  background-size: cover;    /* L'image prend toute la place */
-  background-position: center; /* Centrage de l'image */
-  background-repeat: no-repeat;
-  
-  /* OPTIONNEL: Ajoute un léger voile noir si votre image est trop claire 
-     pour que le texte blanc ressorte bien */
-  background-blend-mode: overlay;
-  background-color: rgba(0, 0, 0, 0.6); 
-
-  color: white;
+.main-section {
+  width: 100%;
   min-height: 100vh;
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-family: 'Inter', sans-serif;
-  padding: 40px 20px;
+  align-items: center;
+  padding: 80px 0;
+  color: white;
 }
 
-.content-wrapper {
-  max-width: 1000px;
-  width: 100%;
+.content-container {
+  width: 90%;
+  max-width: 1200px;
 }
 
 .main-title {
   font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 60px;
+  font-weight: 400;
+  margin-bottom: 70px;
   letter-spacing: 1px;
 }
 
 .steps-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px 60px;
+  gap: 40px 60px; /* Plus d'espace vertical entre les lignes */
   margin-bottom: 80px;
 }
 
 .step-item {
   display: flex;
-  align-items: stretch;
-  height: 50px;
+  align-items: center; /* Aligne la barre grise au centre vertical du carré rouge */
 }
 
 .step-number {
   background-color: #d31d24;
   color: white;
-  width: 50px;
+  
+  /* Dimensions du CARRE (plus grand) */
+  width: 65px;
+  height: 65px;
+  
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  z-index: 2; /* Pour s'assurer qu'il soit bien visible */
 }
 
 .step-text {
   background-color: #e0e0e0;
   color: #000;
   flex-grow: 1;
+  /* Hauteur plus PETITE que le carré rouge */
+  height: 45px; 
   display: flex;
   align-items: center;
-  padding: 0 15px;
+  padding: 0 25px;
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .cta-title {
   font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
+  font-weight: 400;
+  margin-bottom: 35px;
 }
 
 .button-group {
@@ -82,11 +79,10 @@
 
 button {
   cursor: pointer;
-  padding: 12px 25px;
-  font-size: 0.8rem;
-  font-weight: 700;
+  padding: 15px 35px;
+  font-size: 0.85rem;
   border: none;
-  transition: 0.3s;
+  text-transform: uppercase;
 }
 
 .btn-red {
@@ -100,8 +96,22 @@ button {
   border: 1px solid white;
 }
 
-@media (max-width: 768px) {
-  .steps-grid { grid-template-columns: 1fr; }
-  .main-title, .cta-title { font-size: 1.5rem; }
-  .button-group { flex-direction: column; }
+/* Mobile */
+@media (max-width: 850px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .step-number {
+    width: 55px;
+    height: 55px;
+    font-size: 1.2rem;
+  }
+  
+  .step-text {
+    height: 40px;
+    font-size: 0.75rem;
+    padding: 0 15px;
+  }
 }

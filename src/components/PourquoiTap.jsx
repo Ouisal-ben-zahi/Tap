@@ -8,23 +8,15 @@ const PourquoiTap = () => {
       className="pourquoi-section"
       style={{ backgroundImage: `url(${bgSections})` }}
     >
-      <div className="pourquoi-overlay" />
-
       <div className="pourquoi-inner">
         <header className="pourquoi-header">
           <h2>POURQUOI TAP ?</h2>
-
-          <p className="pourquoi-note">
-            Le recrutement décalé repose sur des CV.
-          </p>
-          <p className="pourquoi-note">
-            TAP repose sur des talents révélés.
-          </p>
-          <p className="pourquoi-subtitle">
-            Chaque candidat visible sur TAP est&nbsp;:
-          </p>
+          <p className="pourquoi-note">Le recrutement décalé repose sur des CV.</p>
+          <p className="pourquoi-note">TAP repose sur des talents révélés.</p>
+          <p className="pourquoi-subtitle">Chaque candidat visible sur TAP est :</p>
         </header>
 
+        {/* Section des 4 cartes avec bordure qui dépasse */}
         <div className="pourquoi-tags">
           <div className="tag"><span className="tag-inner">ANALYSE PAR IA</span></div>
           <div className="tag"><span className="tag-inner">STRUCTURÉ ET SCORÉ</span></div>
@@ -32,12 +24,8 @@ const PourquoiTap = () => {
           <div className="tag"><span className="tag-inner">PRÊT À ÊTRE ÉVALUÉ PAR UNE ENTREPRISE</span></div>
         </div>
 
-        <p className="pourquoi-note">
-          Vous ne recevez pas des CV.
-        </p>
-        <p className="pourquoi-note">
-          Vous accédez à des profils préparés.
-        </p>
+        <p className="pourquoi-note">Vous ne recevez pas des CV.</p>
+        <p className="pourquoi-note">Vous accédez à des profils préparés.</p>
 
         <div className="pourquoi-columns">
           <div>
@@ -50,9 +38,7 @@ const PourquoiTap = () => {
                 <p>MOINS DE RISQUE SUR LES DÉBUTS D’ESSAI.</p>
               </div>
             </div>
-            <div className="block-footer">
-              RECRUTEZ MIEUX, PLUS VITE ET PLUS EN CONFIANCE.
-            </div>
+            <div className="block-footer">RECRUTEZ MIEUX, PLUS VITE ET PLUS EN CONFIANCE.</div>
           </div>
 
           <div>
@@ -65,18 +51,12 @@ const PourquoiTap = () => {
                 <p>UN ACCOMPAGNEMENT POUR RÉUSSIR VOS PREMIERS MOIS.</p>
               </div>
             </div>
-
-            <div className="block-footer">
-              100 % gratuit.
-            </div>
-
+            <div className="block-footer">100 % gratuit.</div>
           </div>
         </div>
-
       </div>
     </section>
   );
 };
 
 export default PourquoiTap;
-

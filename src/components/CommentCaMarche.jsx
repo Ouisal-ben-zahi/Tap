@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/TalentSection.css';
-import bgSections from "../assets/bgsections.jpg"; // Importation de l'image
+import bgSections from "../assets/bgsections.jpg";
 
 const TalentSection = () => {
   const steps = [
@@ -11,12 +11,11 @@ const TalentSection = () => {
   ];
 
   return (
-    // On applique l'image ici avec backgroundImage
-    <div 
-      className="main-container" 
+    <section 
+      className="main-section" 
       style={{ backgroundImage: `url(${bgSections})` }}
     >
-      <div className="content-wrapper">
+      <div className="content-container">
         <h2 className="main-title">COMMENT ÇA MARCHE</h2>
 
         <div className="steps-grid">
@@ -36,7 +35,7 @@ const TalentSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
