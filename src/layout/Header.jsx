@@ -39,12 +39,7 @@ const Header = () => {
               </NavLink>
             </li>
 
-            <li>
-              <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
-                Contact
-              </NavLink>
-            </li>
-
+           
             <li>
               <NavLink to="/blog" onClick={() => setMenuOpen(false)}>
                 Blog
@@ -56,6 +51,12 @@ const Header = () => {
                 Offres
               </NavLink>
             </li>
+             <li>
+              <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
+                Contact
+              </NavLink>
+            </li>
+
           </ul>
         </nav>
 

@@ -1,0 +1,150 @@
+.pourquoi-section {
+  position: relative;
+  width: 100%;
+  padding: 80px 0;
+  background-size: cover;
+  background-position: center;
+  color: #EDEDED;
+  box-sizing: border-box;
+}
+
+/* Overlay 
+.pourquoi-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+*/
+/* Contenu principal */
+.pourquoi-inner {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;        /* CENTRÉ */
+  z-index: 1;
+  
+}
+
+/* Header */
+.pourquoi-header h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.pourquoi-header p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Subtitle (titre au-dessus des 4 cartes) */
+.pourquoi-subtitle {
+  margin-top: 20px;
+  margin-bottom: 28px;   /* espacement entre le titre et les 4 cartes */
+  font-weight: 600;
+}
+
+.pourquoi-header p {
+    margin: 0;
+    font-size: 16px;
+    margin-top: 40px;
+}
+/* 4 cartes (style image : fond clair, texte noir, coins rouges) */
+.pourquoi-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 0;
+  margin-bottom: 32px;    /* espacement entre les cartes et les paragraphes en bas */
+}
+
+.tag {
+  position: relative;
+  background-color: #f0f0f0;
+  color: #1a1a1a;
+  padding: 14px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+    border-left: 4px solid red;
+    margin-top: 40px;
+
+  /* Coins en “crochets” rouges */
+}
+
+
+.tag .tag-inner {
+  position: relative;
+  display: block;
+}
+
+
+
+/* Paragraphes sous les cartes (espacement comme sur l’image) */
+.pourquoi-note {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+.pourquoi-note:last-of-type {
+  margin-bottom: 40px;
+}
+
+/* Grid */
+.pourquoi-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Cartes du bas */
+.pourquoi-block {
+  background-color: #000000;
+  border: 1px solid #e01f26;
+}
+
+.block-title {
+  padding: 10px 40px;
+  font-weight: 600;
+  background-color: #e01f26;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.block-body {
+  padding: 40px 40px;
+  font-size: 14px;
+}
+
+.block-body p {
+  margin: 6px 0;              /* espacement entre lignes comme sur le visuel */
+  line-height: 1.4;
+}
+
+.block-footer {
+  padding: 10px 40px 12px;
+  font-size: 14px;
+  background-color: #EDEDED;
+  color: #000000;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .pourquoi-inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .pourquoi-columns {
+    grid-template-columns: 1fr;
+  }
+}

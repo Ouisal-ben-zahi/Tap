@@ -56,9 +56,9 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 8px;
-  padding: 18px 10px 18px 30px;
+  padding: 18px 20px 18px 20px;
   background: rgba(0, 0, 0, 0.85);
   color: #fff;
   border: 1px solid #ca1b28;

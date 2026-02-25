@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+.main-container {
+  background-color: #000; /* Couleur de secours */
+  background-size: cover;    /* L'image prend toute la place */
+  background-position: center; /* Centrage de l'image */
+  background-repeat: no-repeat;
+  
+  /* OPTIONNEL: Ajoute un léger voile noir si votre image est trop claire 
+     pour que le texte blanc ressorte bien */
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.6); 
+
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  padding: 40px 20px;
+}
+
+.content-wrapper {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.main-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  letter-spacing: 1px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 60px;
+  margin-bottom: 80px;
+}
+
+.step-item {
+  display: flex;
+  align-items: stretch;
+  height: 50px;
+}
+
+.step-number {
+  background-color: #d31d24;
+  color: white;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.step-text {
+  background-color: #e0e0e0;
+  color: #000;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.cta-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  cursor: pointer;
+  padding: 12px 25px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-red {
+  background-color: #d31d24;
+  color: white;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+@media (max-width: 768px) {
+  .steps-grid { grid-template-columns: 1fr; }
+  .main-title, .cta-title { font-size: 1.5rem; }
+  .button-group { flex-direction: column; }
+}

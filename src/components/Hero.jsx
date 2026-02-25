@@ -37,7 +37,7 @@ const Hero = () => {
 
         <div className="hero-buttons">
           <button className="btn-primary">
-            RECRUTER DES TALENTS PRÉPARÉS
+            RECRUTER 
           </button>
           <button className="btn-secondary">
             CRÉER MON PROFIL
