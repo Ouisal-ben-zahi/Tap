@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from './layout/Header';
@@ -6,10 +7,16 @@ import About from "./pages/Apropos";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Footer from './layout/Footer';
+import CountdownPopup from "./components/CountdownPopup";
 
 function App() {
+  const [showCountdownPopup, setShowCountdownPopup] = useState(true);
+
   return (
     <Router>
+      {showCountdownPopup && (
+        <CountdownPopup onClose={() => setShowCountdownPopup(false)} />
+      )}
       <Header />
       <div className="app-content">
         <Routes>

@@ -55,38 +55,37 @@ const Header = () => {
 
         {/* Navigation */}
         <nav className={`nav ${menuOpen ? "open" : ""}`} ref={navRef}>
-          <ul>
-            <li>
-              <NavLink to="/" end onClick={() => setMenuOpen(false)}>
-                Accueil
-              </NavLink>
-            </li>
+         <ul>
+  <li>
+    <NavLink to="/" end onClick={() => setMenuOpen(false)}>
+      Accueil
+    </NavLink>
+  </li>
 
-            <li>
-              <NavLink to="/a propos" onClick={() => setMenuOpen(false)}>
-                A propos
-              </NavLink>
-            </li>
+  <li>
+    <NavLink to="/a-propos" onClick={() => setMenuOpen(false)}>
+      À propos
+    </NavLink>
+  </li>
 
-           
-            <li>
-              <NavLink to="/demo" onClick={() => setMenuOpen(false)}>
-                Demo
-              </NavLink>
-            </li>
+  <li>
+    <NavLink to="/demo" onClick={() => setMenuOpen(false)}>
+      Démo
+    </NavLink>
+  </li>
 
-            <li>
-              <NavLink to="/ofrres" onClick={() => setMenuOpen(false)}>
-                Offres
-              </NavLink>
-            </li>
-             <li>
-              <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
-                Contact
-              </NavLink>
-            </li>
+  <li>
+    <NavLink to="/team" onClick={() => setMenuOpen(false)}>
+      Team
+    </NavLink>
+  </li>
 
-          </ul>
+  <li>
+    <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
+      Contact
+    </NavLink>
+  </li>
+</ul>
 
           {/* Boutons visibles en mobile dans le menu */}
           <div className="nav-buttons-mobile">
