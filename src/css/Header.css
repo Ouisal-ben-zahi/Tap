@@ -140,6 +140,7 @@
     gap: 12px;
     padding: 20px 20px 0;
     width: 100%;
+    box-sizing: border-box; /* évite que les boutons dépassent à droite */
   }
 
   .nav-buttons-mobile .login-btn,

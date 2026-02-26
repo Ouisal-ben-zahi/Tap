@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "../css/Header.css";
 import logo from "../assets/logo.svg";
@@ -6,6 +6,34 @@ import logo from "../assets/logo.svg";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const navRef = useRef(null);
+  const burgerRef = useRef(null);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const handleClick = (event) => {
+      const nav = navRef.current;
+      const burger = burgerRef.current;
+      if (!nav || !burger) return;
+      if (nav.contains(event.target) || burger.contains(event.target)) {
+        return;
+      }
+      setMenuOpen(false);
+    };
+
+    const handleScroll = () => {
+      setMenuOpen(false);
+    };
+
+    document.addEventListener("click", handleClick);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      document.removeEventListener("click", handleClick);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [menuOpen]);
 
   return (
     <header className="header">
@@ -17,15 +45,16 @@ const Header = () => {
         </div>
 
         {/* Hamburger (mobile) */}
-        <div 
-          className="hamburger" 
+        <div
+          className="hamburger"
+          ref={burgerRef}
           onClick={() => setMenuOpen(!menuOpen)}
         >
           ☰
         </div>
 
         {/* Navigation */}
-        <nav className={`nav ${menuOpen ? "open" : ""}`}>
+        <nav className={`nav ${menuOpen ? "open" : ""}`} ref={navRef}>
           <ul>
             <li>
               <NavLink to="/" end onClick={() => setMenuOpen(false)}>

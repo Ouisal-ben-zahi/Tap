@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import "../css/PourquoiTap.css";
 import bgSections from "../assets/bgsections.jpg";
 
 const PourquoiTap = () => {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const columnsRef = useRef(null);
+
+  const handleColumnsScroll = () => {
+    const container = columnsRef.current;
+    if (!container) return;
+    const { scrollLeft, scrollWidth, clientWidth } = container;
+    const maxScroll = scrollWidth - clientWidth || 1;
+    const progress = scrollLeft / maxScroll;
+    setActiveSlide(progress > 0.5 ? 1 : 0);
+  };
+
   return (
     <section
       className="pourquoi-section"
@@ -27,7 +39,11 @@ const PourquoiTap = () => {
         <p className="pourquoi-note">Vous ne recevez pas des CV.</p>
         <p className="pourquoi-note">Vous accédez à des profils préparés.</p>
 
-        <div className="pourquoi-columns">
+        <div
+          className="pourquoi-columns"
+          ref={columnsRef}
+          onScroll={handleColumnsScroll}
+        >
           <div>
             <div className="pourquoi-block">
               <div className="block-title">POUR LES ENTREPRISES</div>
@@ -53,6 +69,19 @@ const PourquoiTap = () => {
             </div>
             <div className="block-footer">100 % gratuit.</div>
           </div>
+        </div>
+
+        <div className="pourquoi-dots">
+          <span
+            className={
+              "pourquoi-dot" + (activeSlide === 0 ? " active" : "")
+            }
+          />
+          <span
+            className={
+              "pourquoi-dot" + (activeSlide === 1 ? " active" : "")
+            }
+          />
         </div>
       </div>
     </section>
