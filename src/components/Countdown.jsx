@@ -43,9 +43,9 @@ const Countdown = () => {
     <section className="countdown-section">
       <div className="countdown-inner">
         <div className="countdown-text">
-          <p className="countdown-label">PLUS QUE QUELQUES INSTANTS AVANT TAP V1</p>
-          <p className="countdown-sublabel">
-            Préparez-vous à découvrir la première version de TAP et à révéler encore plus de talents.
+          <h2 className="countdown-title">DÉPLOIEMENT TAP V1 DANS</h2>
+          <p className="countdown-intro">
+            Suivez en temps réel les jours, heures, minutes et secondes avant l’arrivée de la première version de TAP.
           </p>
         </div>
 
@@ -57,7 +57,8 @@ const Countdown = () => {
             >
               <div className="countdown-circle-inner">
                 <span className="countdown-number">{time.days}</span>
-                <span className="countdown-unit">jours</span>
+                <span className="countdown-unit countdown-unit-long">jours</span>
+                <span className="countdown-unit countdown-unit-short">J</span>
               </div>
             </div>
           </div>
@@ -69,7 +70,8 @@ const Countdown = () => {
             >
               <div className="countdown-circle-inner">
                 <span className="countdown-number">{time.hours}</span>
-                <span className="countdown-unit">heures</span>
+                <span className="countdown-unit countdown-unit-long">heures</span>
+                <span className="countdown-unit countdown-unit-short">H</span>
               </div>
             </div>
           </div>
@@ -81,7 +83,8 @@ const Countdown = () => {
             >
               <div className="countdown-circle-inner">
                 <span className="countdown-number">{time.minutes}</span>
-                <span className="countdown-unit">minutes</span>
+                <span className="countdown-unit countdown-unit-long">minutes</span>
+                <span className="countdown-unit countdown-unit-short">M</span>
               </div>
             </div>
           </div>
@@ -93,7 +96,8 @@ const Countdown = () => {
             >
               <div className="countdown-circle-inner">
                 <span className="countdown-number">{time.seconds}</span>
-                <span className="countdown-unit">secondes</span>
+                <span className="countdown-unit countdown-unit-long">secondes</span>
+                <span className="countdown-unit countdown-unit-short">S</span>
               </div>
             </div>
           </div>

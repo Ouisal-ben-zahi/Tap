@@ -50,7 +50,7 @@
 .countdown-number {
   font-size: 40px;
   font-weight: 700;
-  color: #e01f26; /* rouge = temps restant */
+  color: #d2d2d2; /* rouge = temps restant */
   line-height: 1;
 }
 
@@ -60,6 +60,10 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   color: #d2d2d2; /* gris = repère neutre */
+}
+
+.countdown-unit-short {
+  display: none;
 }
 
 .countdown-text {
@@ -79,18 +83,19 @@
   flex-shrink: 0;
 }
 
-.countdown-label {
+.countdown-title {
   margin: 0;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #EDEDED;
+  margin-bottom: 30px;
 }
 
-.countdown-sublabel {
+.countdown-intro {
   margin: 0;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 400;
   color: rgba(237, 237, 237, 0.9);
 }
@@ -115,7 +120,33 @@
     gap: 18px;
   }
 
+  .countdown-circle {
+    width: 70px;
+    height: 70px;
+    padding: 3px;
+  }
+
+  .countdown-circle-inner {
+    width: 100%;
+    height: 100%;
+  }
+
   .countdown-number {
-    font-size: 34px;
+    font-size: 22px;
+  }
+
+  .countdown-circles {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 20px;
+  }
+
+  .countdown-unit-long {
+    display: none;
+  }
+
+  .countdown-unit-short {
+    display: inline;
   }
 }
