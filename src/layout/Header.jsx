@@ -63,20 +63,20 @@ const Header = () => {
             </li>
 
             <li>
-              <NavLink to="/a-propos" onClick={() => setMenuOpen(false)}>
+              <NavLink to="/a propos" onClick={() => setMenuOpen(false)}>
                 A propos
               </NavLink>
             </li>
 
            
             <li>
-              <NavLink to="/blog" onClick={() => setMenuOpen(false)}>
-                Blog
+              <NavLink to="/demo" onClick={() => setMenuOpen(false)}>
+                Demo
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/offres" onClick={() => setMenuOpen(false)}>
+              <NavLink to="/ofrres" onClick={() => setMenuOpen(false)}>
                 Offres
               </NavLink>
             </li>
@@ -95,7 +95,7 @@ const Header = () => {
             </button>
             <button
               className="signup-btn"
-              onClick={() => { setMenuOpen(false); navigate("/profil"); }}
+              onClick={() => { setMenuOpen(false); navigate("/"); }}
             >
               Créer mon profil
             </button>
@@ -110,7 +110,7 @@ const Header = () => {
 
           <button 
             className="signup-btn"
-            onClick={() => navigate("/profil")}
+            onClick={() => navigate("/")}
           >
             Créer mon profil
           </button>

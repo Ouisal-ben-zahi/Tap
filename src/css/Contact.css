@@ -1,0 +1,129 @@
+.contact-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;            /* occupe toute la hauteur de l’écran */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;      /* centre le bloc de contenu */
+  padding: 140px 5% 40px;       /* espace pour laisser passer le header fixe */
+  box-sizing: border-box;
+}
+
+.contact-inner {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.contact-header h2 {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0 0 12px 0;
+  color: #f5f5f5;
+}
+
+.contact-header p {
+  margin: 0 0 32px 0;
+  font-size: 15px;
+  max-width: 640px;
+    color: #f5f5f5;
+
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 520px);
+  gap: 40px;
+}
+
+.contact-form {
+  border: none;
+  padding: 28px 28px 32px 0; /* pas de padding à gauche pour aligner avec le texte */
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+    color: #f5f5f5;
+
+}
+
+.form-field input,
+.form-field textarea {
+background-color: #E6E6E6;
+  border: 1px solid #E6E6E6;            /* bordure rouge TAP */
+  color: #EDEDED;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #777;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: #e01f26;
+}
+
+.contact-submit {
+  align-self: flex-start;
+  margin-top: 8px;
+  padding: 12px 26px;
+  background-color: #e01f26;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.contact-submit:hover {
+  background-color: #c01822;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 120px 0 60px 0;
+  }
+
+  .contact-form {
+    padding: 22px 18px 26px 18px; /* en mobile on remet un padding complet */
+
+  }
+  .contact-form {
+  border: none;
+  padding: 28px 28px 32px 0; /* pas de padding à gauche pour aligner avec le texte */
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -21,17 +21,26 @@ const Hero = () => {
         </p>
 
         <div className="hero-cards">
-          <div className="hero-card">
-            <img src={cardIcon} alt="" className="hero-card-icon" />
-            <span>Moins de tri.</span>
+          <div className="hero-stat-card">
+            <img src={cardIcon} alt="" className="hero-stat-icon" />
+            <div className="hero-stat-value">80%</div>
+            <p className="hero-stat-text">
+              Des candidatures sont filtrées avant lecture humaine.
+            </p>
           </div>
-          <div className="hero-card">
-            <img src={cardIcon} alt="" className="hero-card-icon" />
-            <span>Moins de risque.</span>
+          <div className="hero-stat-card">
+            <img src={cardIcon} alt="" className="hero-stat-icon" />
+            <div className="hero-stat-value">45%</div>
+            <p className="hero-stat-text">
+              Des diplômés restent invisibles faute de preuves concrètes.
+            </p>
           </div>
-          <div className="hero-card">
-            <img src={cardIcon} alt="" className="hero-card-icon" />
-            <span>Plus de talents prêts.</span>
+          <div className="hero-stat-card">
+            <img src={cardIcon} alt="" className="hero-stat-icon" />
+            <div className="hero-stat-value">35%</div>
+            <p className="hero-stat-text">
+              Des talents quittent leur poste faute d’accompagnement.
+            </p>
           </div>
         </div>
 
