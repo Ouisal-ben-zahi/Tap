@@ -1,9 +1,35 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "../css/Hero.css";
 import heroImage from "../assets/hero.jpg";
 import cardIcon from "../assets/path20.svg";
 
+const stats = [
+  {
+    value: "80%",
+    text: "Des candidatures sont filtrées avant lecture humaine.",
+  },
+  {
+    value: "45%",
+    text: "Des diplômés restent invisibles faute de preuves concrètes.",
+  },
+  {
+    value: "35%",
+    text: "Des talents quittent leur poste faute d’accompagnement.",
+  },
+];
+
 const Hero = () => {
+  const [activeCard, setActiveCard] = useState(0);
+  const cardsRef = useRef(null);
+
+  const handleScroll = () => {
+    const el = cardsRef.current;
+    if (!el) return;
+    const width = el.clientWidth || 1;
+    const index = Math.round(el.scrollLeft / width);
+    setActiveCard(Math.max(0, Math.min(stats.length - 1, index)));
+  };
+
   return (
     <section
       className="hero"
@@ -20,28 +46,35 @@ const Hero = () => {
           Nous analysons, formons et évaluons les candidats grâce à l’IA avant de les connecter aux entreprises.
         </p>
 
-        <div className="hero-cards">
-          <div className="hero-stat-card">
-            <img src={cardIcon} alt="" className="hero-stat-icon" />
-            <div className="hero-stat-value">80%</div>
-            <p className="hero-stat-text">
-              Des candidatures sont filtrées avant lecture humaine.
-            </p>
-          </div>
-          <div className="hero-stat-card">
-            <img src={cardIcon} alt="" className="hero-stat-icon" />
-            <div className="hero-stat-value">45%</div>
-            <p className="hero-stat-text">
-              Des diplômés restent invisibles faute de preuves concrètes.
-            </p>
-          </div>
-          <div className="hero-stat-card">
-            <img src={cardIcon} alt="" className="hero-stat-icon" />
-            <div className="hero-stat-value">35%</div>
-            <p className="hero-stat-text">
-              Des talents quittent leur poste faute d’accompagnement.
-            </p>
-          </div>
+        <div
+          className="hero-cards"
+          ref={cardsRef}
+          onScroll={handleScroll}
+        >
+          {stats.map((item, index) => (
+            <div
+              key={index}
+              className={
+                "hero-stat-card" +
+                (activeCard === index ? " active" : "")
+              }
+            >
+              <img src={cardIcon} alt="" className="hero-stat-icon" />
+              <div className="hero-stat-value">{item.value}</div>
+              <p className="hero-stat-text">{item.text}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="hero-dots">
+          {stats.map((_, index) => (
+            <span
+              key={index}
+              className={
+                "hero-dot" + (activeCard === index ? " active" : "")
+              }
+            />
+          ))}
         </div>
 
         <div className="hero-buttons">
