@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/Apropos.css";
+import "../css/PourquoiTap.css";
 import heroImage from "../assets/hero.jpg";
 
 function About() {
@@ -12,7 +13,9 @@ function About() {
 
       <div className="about-inner">
         <header className="about-header">
-          <p className="about-eyebrow">À PROPOS DE TAP</p>
+          <div className="tag about-eyebrow-tag">
+            <span className="tag-inner">À PROPOS DE TAP</span>
+          </div>
           <h1>
             La plateforme d&apos;employabilité qui élève chaque talent au
             niveau d&apos;exigence des meilleures entreprises.

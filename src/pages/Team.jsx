@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/Team.css";
 import heroImage from "../assets/hero.jpg";
+import imadAvatar from "../assets/imad-el-boukhiari.png";
+import zakariaAvatar from "../assets/zakaria-Ajmil.png";
+import "../css/PourquoiTap.css"
 
 const founders = [
   {
     name: "Imad El Boukhiari",
     role: "Co‑Founder",
     focus:
-      "Co‑fondateur de TAP, en charge de la vision globale et du déploiement stratégique auprès des partenaires et entreprises.",
+      "Co‑fondateur de TAP, Imad pilote la vision globale de la plateforme et le déploiement stratégique auprès des entreprises et partenaires. Entrepreneur engagé, il orchestre les partenariats clés et s’assure que TAP reste alignée sur les enjeux du marché de l’emploi et de l’upskilling.",
+    avatar: imadAvatar,
   },
   {
     name: "zakaria Ajmil",
     role: "Co‑Founder",
     focus:
-      "Co‑fondateur de TAP, garant de l’exécution opérationnelle et de l’alignement entre produit, marché et expérience talents.",
+      "Co‑fondateur de TAP, Zakaria est le garant de l’exécution opérationnelle et de la qualité d’expérience pour les talents comme pour les recruteurs. Il veille à ce que chaque fonctionnalité soit concrètement utile, mesurable et fidèle à l’ambition d’excellence de TAP.",
+    avatar: zakariaAvatar,
   },
 ];
 
@@ -22,23 +27,29 @@ const teamMembers = [
     name: "Ouissal Ben Zahi",
     role: "Lead Full‑Stack",
     focus:
-      "Architecture et développement de la plateforme TAP, de l’interface aux services backend.",
+      "Lead Full‑Stack au cœur du produit TAP, Ouissal conçoit et développe l’architecture de la plateforme, du front à l’infrastructure backend. Elle s’assure que chaque parcours utilisateur soit fluide, robuste et prêt à évoluer à grande échelle.",
   },
   {
     name: "Hajar El Aouni",
     role: "AI Product Lead",
     focus:
-      "Conception des parcours et des fonctionnalités pilotées par l’IA au service de l’employabilité.",
+      "AI Product Lead, Hajar imagine et pilote les expériences guidées par l’IA au sein de TAP. Elle travaille à transformer les données en recommandations concrètes pour aider chaque talent à mieux se positionner, monter en compétences et gagner en employabilité.",
   },
   {
     name: "Ayoub Zouani",
     role: "Product Designer UI/UX",
     focus:
-      "Expérience utilisateur et identité visuelle, au service d’une interface à la fois élégante et exigeante.",
+      "Product Designer UI/UX, Ayoub façonne l’identité visuelle de TAP et conçoit des interfaces exigeantes mais accessibles. Son objectif : créer une expérience claire, esthétique et rassurante, qui valorise le parcours des talents et la marque employeur des entreprises.",
   }
 ];
 
 function Team() {
+  const [openBioIndex, setOpenBioIndex] = useState(null);
+
+  const handleToggleBio = (index) => {
+    setOpenBioIndex((current) => (current === index ? null : index));
+  };
+
   const allMembers = [...founders, ...teamMembers];
 
   return (
@@ -50,7 +61,8 @@ function Team() {
 
       <div className="team-inner">
         <header className="team-header">
-          <p className="team-eyebrow">L&apos;ÉQUIPE TAP</p>
+          <div className="tag team-eyebrow-tag"><span className="tag-inner">L&apos;ÉQUIPE TAP</span></div>
+          
           <h1>
             Une équipe fondatrice et opérationnelle réunie autour d&apos;une
             ambition commune&nbsp;: élever les standards de l&apos;employabilité.
@@ -71,27 +83,45 @@ function Team() {
             >
               <article className="team-card">
                 <div className="team-avatar">
-                  <span>
-                    {member.name
-                      .split(" ")
-                      .map((part) => part[0])
-                      .join("")}
-                  </span>
+                  {member.avatar ? (
+                    <img src={member.avatar} alt={member.name} />
+                  ) : (
+                    <span>
+                      {member.name
+                        .split(" ")
+                        .map((part) => part[0])
+                        .join("")}
+                    </span>
+                  )}
                 </div>
                 <div className="team-card-body">
-                  <h2>{member.name}</h2>
-                  <p className="team-role">{member.role}</p>
-                  <p className="team-focus">{member.focus}</p>
-                  <div className="team-card-footer">
-                    <div className="team-bio-link-wrapper">
-                      <span className="team-bio-text">Découvrir sa bio</span>
-                      <span className="team-bio-arrow">↓</span>
+                  <div className="team-card-header">
+                    <div>
+                      <h2>{member.name}</h2>
+                      <p className="team-role">{member.role}</p>
                     </div>
                     <div className="team-social">
                       <span className="team-social-icon">in</span>
                       <span className="team-social-icon">@</span>
                     </div>
                   </div>
+
+                  <button
+                    type="button"
+                    className={`team-bio-link-wrapper ${
+                      openBioIndex === index ? "team-bio-link-active" : ""
+                    }`}
+                    onClick={() => handleToggleBio(index)}
+                  >
+                    <span className="team-bio-text">Découvrir sa bio</span>
+                    <span className="team-bio-arrow">
+                      {openBioIndex === index ? "↑" : "↓"}
+                    </span>
+                  </button>
+
+                  {openBioIndex === index && (
+                    <p className="team-focus">{member.focus}</p>
+                  )}
                 </div>
               </article>
             </div>

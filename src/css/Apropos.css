@@ -40,11 +40,9 @@
   max-width: 840px;
 }
 
-.about-eyebrow {
-  font-size: 12px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #ca1b28;
+.about-eyebrow-tag {
+  display: inline-flex;
+  width: auto;
   margin: 0 0 12px 0;
 }
 

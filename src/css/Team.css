@@ -38,12 +38,11 @@
   margin: 0 auto 40px;
 }
 
-.team-eyebrow {
-  font-size: 12px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #ca1b28;
-  margin: 0 0 12px 0;
+/* Même design que .tag .tag-inner (PourquoiTap) */
+.team-eyebrow-tag {
+  display: inline-flex;
+  width: auto;
+  margin-bottom: 12px;
 }
 
 .team-header h1 {
@@ -56,21 +55,23 @@
 
 .team-header p {
   margin: 0;
-  font-size: 15px;
-  max-width: 700px;
+  font-size: 16px;
+  max-width: 400px;
 }
 
 .team-list {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 208px;
   overflow: visible;
+  margin-top: 80px;
+  margin-bottom: 50px;
 }
 
 /* La row prend 100% de la largeur de l'écran */
 .team-row {
   width: 100%;
-  padding: 32px 0;
+  padding: 24px 0;
   background: linear-gradient(
     90deg,
     rgba(202, 27, 40, 0.18),
@@ -116,7 +117,6 @@
 .team-avatar {
   width: 100%;
   min-height: 230px;
-  border-radius: 8px;
   border: 1px solid rgba(245, 245, 245, 0.6);
   display: flex;
   align-items: center;
@@ -137,6 +137,13 @@
   z-index: 2;
 }
 
+.team-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .team-avatar span {
   transform: translateY(1px);
 }
@@ -154,7 +161,16 @@
 .team-card-body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.team-card-header {
+  display: flex;
+  align-items: flex-start;
   justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 2px;
 }
 
 .team-card-body h2 {
@@ -174,7 +190,7 @@
 .team-focus {
   font-size: 13px;
   line-height: 1.55;
-  margin: 0;
+  margin: 8px 0 0 0;
 }
 
 .team-card-footer {
@@ -193,8 +209,20 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   cursor: pointer;
-  padding-bottom: 6px;
+  margin-top: 2px;
+  padding: 0 0 6px 0;
+  border: none;
   border-bottom: 1px solid rgba(202, 27, 40, 0.9);
+  background: transparent;
+  color: inherit;
+}
+
+.team-bio-link-wrapper:hover .team-bio-text {
+  color: #ffffff;
+}
+
+.team-bio-link-active {
+  border-bottom-color: #ffffff;
 }
 
 .team-bio-text {
@@ -215,7 +243,6 @@
 .team-social-icon {
   width: 26px;
   height: 26px;
-  border-radius: 999px;
   border: 1px solid rgba(245, 245, 245, 0.7);
   display: flex;
   align-items: center;
@@ -243,9 +270,20 @@
     padding: 120px 0 50px;
   }
 
+  .team-list {
+    gap: 16px; /* moins d'espace entre les profils en mobile */
+  }
+
   .team-card {
     grid-template-columns: minmax(0, 1fr);
     row-gap: 18px;
+    width: 94%;
+  }
+
+  /* Désactive l'alternance gauche/droite en mobile :
+     toutes les cards ont une seule colonne, avatar en haut, texte en bas */
+  .team-row-alt .team-card {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .team-row-alt .team-avatar {
@@ -266,5 +304,33 @@
 
   .team-header h1 {
     font-size: 26px;
+  }
+
+  .team-row {
+    padding: 14px 0;
+  }
+
+  .team-card-body {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .team-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .team-card-body h2 {
+    font-size: 15px;
+  }
+
+  .team-role {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+
+  .team-focus {
+    font-size: 13px;
   }
 }
