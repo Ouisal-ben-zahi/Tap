@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "../css/Team.css";
-import heroImage from "../assets/hero.jpg";
+import heroImage from "../assets/bgpages.jpg";
 import imadAvatar from "../assets/imad-el-boukhiari.png";
 import zakariaAvatar from "../assets/zakaria-Ajmil.png";
+import hajarAvatar from "../assets/Hajar-el-aouni.jpg";
+import jawharAvatar from "../assets/Juwher Profil.jpg";
+import ouissalAvatar from "../assets/Hajar-el-aouni.jpg";
 import "../css/PourquoiTap.css"
 
 const founders = [
@@ -32,24 +35,20 @@ const teamMembers = [
   {
     name: "Hajar El Aouni",
     role: "AI Product Lead",
+    avatar: hajarAvatar,
     focus:
       "AI Product Lead, Hajar imagine et pilote les expériences guidées par l’IA au sein de TAP. Elle travaille à transformer les données en recommandations concrètes pour aider chaque talent à mieux se positionner, monter en compétences et gagner en employabilité.",
   },
   {
     name: "Ayoub Zouani",
     role: "Product Designer UI/UX",
+    avatar: jawharAvatar,
     focus:
       "Product Designer UI/UX, Ayoub façonne l’identité visuelle de TAP et conçoit des interfaces exigeantes mais accessibles. Son objectif : créer une expérience claire, esthétique et rassurante, qui valorise le parcours des talents et la marque employeur des entreprises.",
   }
 ];
 
 function Team() {
-  const [openBioIndex, setOpenBioIndex] = useState(null);
-
-  const handleToggleBio = (index) => {
-    setOpenBioIndex((current) => (current === index ? null : index));
-  };
-
   const allMembers = [...founders, ...teamMembers];
 
   return (
@@ -106,20 +105,7 @@ function Team() {
                     </div>
                   </div>
 
-                  <button
-                    type="button"
-                    className={`team-bio-link-wrapper ${
-                      openBioIndex === index ? "team-bio-link-active" : ""
-                    }`}
-                    onClick={() => handleToggleBio(index)}
-                  >
-                    <span className="team-bio-text">Découvrir sa bio</span>
-                    <span className="team-bio-arrow">
-                      {openBioIndex === index ? "↑" : "↓"}
-                    </span>
-                  </button>
-
-                  {openBioIndex === index && (
+                  {member.focus && (
                     <p className="team-focus">{member.focus}</p>
                   )}
                 </div>
