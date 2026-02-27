@@ -174,3 +174,14 @@
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
 }
+
+.hero-stats {
+  background-color: #000;
+  padding: 30px 5% 40px;
+}
+
+.hero-stats-inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}

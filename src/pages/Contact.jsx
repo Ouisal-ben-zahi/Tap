@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/Contact.css";
 import "../css/PourquoiTap.css";
-import heroImage from "../assets/hero.jpg";
+import heroImage from "../assets/bgpages.jpg";
 
 function Contact() {
   return (
