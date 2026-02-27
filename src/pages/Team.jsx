@@ -29,6 +29,7 @@ const teamMembers = [
   {
     name: "Ouissal Ben Zahi",
     role: "Lead Full‑Stack",
+    avatar: ouissalAvatar,
     focus:
       "Lead Full‑Stack au cœur du produit TAP, Ouissal conçoit et développe l’architecture de la plateforme, du front à l’infrastructure backend. Elle s’assure que chaque parcours utilisateur soit fluide, robuste et prêt à évoluer à grande échelle.",
   },
