@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "../css/Hero.css";
 import heroImage from "../assets/hero.jpg";
 import cardIcon from "../assets/path20.svg";
@@ -21,6 +21,8 @@ const stats = [
 const Hero = () => {
   const [activeCard, setActiveCard] = useState(0);
   const cardsRef = useRef(null);
+   const autoScrollRef = useRef(null);
+   const [autoScrollActive, setAutoScrollActive] = useState(true);
 
   const handleScroll = () => {
     const el = cardsRef.current;
@@ -29,6 +31,42 @@ const Hero = () => {
     const index = Math.round(el.scrollLeft / width);
     setActiveCard(Math.max(0, Math.min(stats.length - 1, index)));
   };
+
+  const stopAutoScroll = () => {
+    if (!autoScrollActive) return;
+    setAutoScrollActive(false);
+    if (autoScrollRef.current) {
+      clearInterval(autoScrollRef.current);
+      autoScrollRef.current = null;
+    }
+  };
+
+  useEffect(() => {
+    const el = cardsRef.current;
+    if (!el) return;
+
+    // Auto-scroll uniquement en mobile, et seulement tant qu'il est actif
+    if (window.innerWidth > 768 || !autoScrollActive) return;
+
+    autoScrollRef.current = setInterval(() => {
+      const width = el.clientWidth || 1;
+      setActiveCard((prev) => {
+        const next = (prev + 1) % stats.length;
+        el.scrollTo({
+          left: next * width,
+          behavior: "smooth",
+        });
+        return next;
+      });
+    }, 2000);
+
+    return () => {
+      if (autoScrollRef.current) {
+        clearInterval(autoScrollRef.current);
+        autoScrollRef.current = null;
+      }
+    };
+  }, [autoScrollActive]);
 
   return (
     <section
@@ -50,6 +88,9 @@ const Hero = () => {
           className="hero-cards"
           ref={cardsRef}
           onScroll={handleScroll}
+          onMouseEnter={stopAutoScroll}
+          onTouchStart={stopAutoScroll}
+          onClick={stopAutoScroll}
         >
           {stats.map((item, index) => (
             <div

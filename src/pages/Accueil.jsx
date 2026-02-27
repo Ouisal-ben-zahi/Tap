@@ -8,7 +8,6 @@ const Accueil = () => {
   return (
     <div>
       <Hero />
-      <Countdown />
       <PourquoiTap />
       <TalentSection />
     </div>

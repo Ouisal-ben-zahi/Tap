@@ -24,6 +24,7 @@
   overflow-x: hidden;
   animation: popupBoxIn 0.4s ease-out;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.9);
+  border-radius: 6px;
 }
 
 .countdown-popup-box::before {
@@ -101,6 +102,35 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+/* Ajustements spécifiques en mobile pour garder le popup centré et contenu */
+@media (max-width: 768px) {
+  .countdown-popup-box {
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  .countdown-popup-box .countdown-section {
+    padding: 24px 12px 20px 0px;
+  }
+
+  .countdown-popup-box .countdown-circle {
+    width: 64px;
+    height: 64px;
+  }
+
+  .countdown-popup-box .countdown-number {
+    font-size: 22px;
+  }
+
+  .countdown-popup-box .countdown-inner {
+    gap: 16px;
+  }
+
+  .countdown-popup-box .countdown-circles {
+    gap: 8px;
   }
 }
 
