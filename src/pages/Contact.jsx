@@ -47,7 +47,7 @@ function Contact() {
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="vous@entreprise.com"
+                  placeholder="vous@gmail.com"
                   required
                 />
               </div>
@@ -69,7 +69,7 @@ function Contact() {
                   id="topic"
                   name="subject"
                   type="text"
-                  placeholder="Recrutement, partenariat, information..."
+                  placeholder="Recrutement, partenariat..."
                   required
                 />
               </div>
