@@ -69,6 +69,7 @@ const HeroStats = () => {
   return (
     <section className="hero-stats">
       <div className="hero-stats-inner">
+        <h2>Rejetés avant d’être compris.</h2>
         <div
           className="hero-cards"
           ref={cardsRef}

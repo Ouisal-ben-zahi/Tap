@@ -5,7 +5,7 @@ import imadAvatar from "../assets/imad-el-boukhiari.png";
 import zakariaAvatar from "../assets/zakaria-Ajmil.png";
 import hajarAvatar from "../assets/Hajar-el-aouni.jpg";
 import jawharAvatar from "../assets/Juwher Profil.jpg";
-import ouissalAvatar from "../assets/Hajar-el-aouni.jpg";
+import ouissalAvatar from "../assets/Ouissal-ben-zahi.jpg";
 import "../css/PourquoiTap.css"
 
 const founders = [
