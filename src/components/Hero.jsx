@@ -1,16 +1,19 @@
 import React from "react";
 import "../css/Hero.css";
-import heroImage from "../assets/hero.jpg";
+import heroImage from "../assets/herobgacc.jpeg";
 
 const Hero = () => {
   return (
-    <section
-      className="hero"
-      style={{ backgroundImage: `url(${heroImage})` }}
-    >
-      <div className="hero-overlay"></div>
+    <section className="hero">
+      <img
+        src={heroImage}
+        alt=""
+        className="hero-bg-img"
+      />
+      <div className="hero-overlay" />
 
       <div className="hero-content">
+        <div className="hero-content-inner">
         <h1>
           LA PLATEFORME DE RECRUTEMENT QUI TRANSFORME DES PROFILS EN TALENTS PRÊTS À EMBAUCHER.
         </h1>
@@ -26,6 +29,7 @@ const Hero = () => {
           <button className="btn-secondary">
             CRÉER MON PROFIL
           </button>
+        </div>
         </div>
       </div>
     </section>

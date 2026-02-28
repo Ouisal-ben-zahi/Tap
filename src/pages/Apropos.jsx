@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "../css/Apropos.css";
 import "../css/PourquoiTap.css";
 import heroImage from "../assets/hero.jpg";
 
 function About() {
+  const headerRef = useRef(null);
+  const blocksRef = useRef(null);
+  const [headerVisible, setHeaderVisible] = useState(false);
+  const [blocksVisible, setBlocksVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setHeaderVisible(entry.isIntersecting),
+      { threshold: 0.2, rootMargin: "0px 0px -80px 0px" }
+    );
+    if (headerRef.current) observer.observe(headerRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setBlocksVisible(entry.isIntersecting),
+      { threshold: 0.08, rootMargin: "0px 0px -60px 0px" }
+    );
+    if (blocksRef.current) observer.observe(blocksRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
       className="about-section"
@@ -12,7 +35,10 @@ function About() {
       <div className="about-overlay" />
 
       <div className="about-inner">
-        <header className="about-header">
+        <header
+          ref={headerRef}
+          className={`about-header ${headerVisible ? "about-header--visible" : ""}`}
+        >
           <div className="tag about-eyebrow-tag">
             <span className="tag-inner">À PROPOS DE TAP</span>
           </div>
@@ -28,8 +54,11 @@ function About() {
           </p>
         </header>
 
-        <div className="about-grid">
-          <section className="about-column">
+        <div
+          ref={blocksRef}
+          className={`about-blocks ${blocksVisible ? "about-blocks--visible" : ""}`}
+        >
+          <section className="about-block about-block--1">
             <h2>Notre vision et notre mission</h2>
             <p>
               Réconcilier le potentiel des talents avec le niveau
@@ -37,60 +66,42 @@ function About() {
               d&apos;employabilité pilotée par la donnée et l&apos;expérience.
             </p>
             <ul className="about-list">
-              <li>
-                Offrir à chaque candidat un diagnostic précis et actionnable de
-                son employabilité, au‑delà du CV et du diplôme.
-              </li>
-              <li>
-                Concevoir des parcours de micro‑learning ciblés qui adressent
-                les vrais écarts observés sur le terrain.
-              </li>
-              <li>
-                Générer un portfolio vivant qui documente, par la preuve,
-                l&apos;évolution des compétences et des réalisations.
-              </li>
+              <li>Diagnostic précis et actionnable de l&apos;employabilité, au‑delà du CV.</li>
+              <li>Parcours de micro‑learning ciblés sur les vrais écarts terrain.</li>
+              <li>Portfolio vivant qui documente l&apos;évolution des compétences.</li>
             </ul>
           </section>
 
-          <section className="about-column">
-            <h2>Un dispositif pensé pour les acteurs exigeants</h2>
+          <section className="about-block about-block--2">
+            <h2>Pour les acteurs exigeants</h2>
             <p>
               TAP s&apos;adresse aux talents et aux organisations qui visent un
               recrutement raisonné, durable et aligné avec des enjeux
               stratégiques forts.
             </p>
-            <div className="about-tags">
-              <span className="about-tag">Jeunes diplômés à haut potentiel</span>
-              <span className="about-tag">Profils en reconversion ambitieuse</span>
-              <span className="about-tag">Talents tech &amp; métiers d&apos;avenir</span>
-              <span className="about-tag">Écoles &amp; institutions académiques</span>
-              <span className="about-tag">Entreprises en quête de précision</span>
-            </div>
+            <ul className="about-list">
+              <li>Jeunes diplômés à haut potentiel</li>
+              <li>Profils en reconversion ambitieuse</li>
+              <li>Talents tech et métiers d&apos;avenir</li>
+              <li>Écoles et institutions académiques</li>
+              <li>Entreprises en quête de précision</li>
+            </ul>
           </section>
 
-          <aside className="about-highlight">
-            <h3>Une expérience de recrutement haut de gamme</h3>
+          <section className="about-block about-block--3">
+            <h2>Recrutement haut de gamme</h2>
             <p>
               TAP transforme un flux de candidatures en un portefeuille
               restreint de talents sélectionnés, préparés et alignés avec votre
               niveau d&apos;exigence.
             </p>
-            <ul>
-              <li>Réduction drastique du temps passé sur des CV peu qualifiés.</li>
-              <li>
-                Des candidats déjà acculturés aux fondamentaux du poste et de
-                votre environnement.
-              </li>
-              <li>
-                Un score d&apos;employabilité lisible pour comparer les profils
-                en toute transparence.
-              </li>
-              <li>
-                Une meilleure rétention dès l&apos;amont, grâce à un
-                accompagnement structuré du candidat avant même son arrivée.
-              </li>
+            <ul className="about-list">
+              <li>Moins de temps sur des CV peu qualifiés.</li>
+              <li>Candidats acculturés aux fondamentaux du poste.</li>
+              <li>Score d&apos;employabilité lisible et transparent.</li>
+              <li>Meilleure rétention grâce à l&apos;accompagnement en amont.</li>
             </ul>
-          </aside>
+          </section>
         </div>
       </div>
     </section>

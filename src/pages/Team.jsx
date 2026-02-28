@@ -34,19 +34,20 @@ const teamMembers = [
       "Lead Full‑Stack au cœur du produit TAP, Ouissal conçoit et développe l’architecture de la plateforme, du front à l’infrastructure backend. Elle s’assure que chaque parcours utilisateur soit fluide, robuste et prêt à évoluer à grande échelle.",
   },
   {
-    name: "Hajar El Aouni",
-    role: "AI Product Lead",
-    avatar: hajarAvatar,
-    focus:
-      "AI Product Lead, Hajar imagine et pilote les expériences guidées par l’IA au sein de TAP. Elle travaille à transformer les données en recommandations concrètes pour aider chaque talent à mieux se positionner, monter en compétences et gagner en employabilité.",
-  },
-  {
     name: "Ayoub Zouani",
     role: "Product Designer UI/UX",
     avatar: jawharAvatar,
     focus:
       "Product Designer UI/UX, Ayoub façonne l’identité visuelle de TAP et conçoit des interfaces exigeantes mais accessibles. Son objectif : créer une expérience claire, esthétique et rassurante, qui valorise le parcours des talents et la marque employeur des entreprises.",
+  },
+  {
+    name: "Hajar El Aouni",
+    role: "AI Product Lead",
+    avatar: hajarAvatar,
+    focus:
+      "AI Product Lead, Hajar imagine et pilote les expériences guidées par l’IA au sein de TAP. Elle travaille à transformer les données en recommandations concrètes pour aider chaque talent à mieux se positionner, monter en compétences et gagner en employabilité.",
   }
+  
 ];
 
 function Team() {

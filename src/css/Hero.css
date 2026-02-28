@@ -2,26 +2,47 @@
 .hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;            /* occupe toute la hauteur de l’écran */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;      /* centre le bloc de contenu */
-  padding: 140px 5% 40px;       /* espace pour laisser passer le header fixe */
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;            /* occupe toute la hauteur de l’écran */
   box-sizing: border-box;
 }
 
 
 
-.hero-content {
-  position: relative;
-  max-width: 1200px;            /* largeur max du contenu */
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  margin: 0 auto;
+  height: 100%;
+  object-fit: cover;            /* remplit tout l'écran */
+  object-position: center center;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 5% 40px;
+  box-sizing: border-box;
   color: #f5f5f5;
   text-align: left;
   z-index: 2;
+}
+
+.hero-content-inner {
+  max-width: 1200px;
+  width: 100%;
 }
 
 .hero-content h1 {
@@ -184,4 +205,13 @@
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+}
+
+.hero-stats-title {
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #f5f5f5;
+  margin: 0 0 24px 0;
 }

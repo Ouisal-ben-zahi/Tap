@@ -1,7 +1,6 @@
 import React from "react";
 import Hero from "../components/Hero";
 import HeroStats from "../components/HeroStats";
-import Countdown from "../components/Countdown";
 import PourquoiTap from "../components/PourquoiTap";
 import TalentSection from "../components/CommentCaMarche";
 
