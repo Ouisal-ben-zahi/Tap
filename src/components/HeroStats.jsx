@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import "../css/Hero.css";
+import "../css/HeroStats.css";
 import cardIcon from "../assets/path20.svg";
 
 const stats = [

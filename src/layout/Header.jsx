@@ -69,7 +69,7 @@ const Header = () => {
   </li>
 
   <li>
-    <NavLink to="/demo" onClick={() => setMenuOpen(false)}>
+    <NavLink to="https://demo.tap-hr.com/" onClick={() => setMenuOpen(false)}>
       Démo
     </NavLink>
   </li>

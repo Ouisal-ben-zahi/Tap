@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import "../css/PourquoiTap.css";
-import bgSections from "../assets/bgsections.jpg";
+import HeroStats from "./HeroStats";
 
 const PourquoiTap = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -16,10 +16,9 @@ const PourquoiTap = () => {
   };
 
   return (
-    <section
-      className="pourquoi-section"
-      style={{ backgroundImage: `url(${bgSections})` }}
-    >
+    <section className="pourquoi-section">
+            <HeroStats />
+      
       <div className="pourquoi-inner">
         <header className="pourquoi-header">
           <h2>POURQUOI TAP ?</h2>

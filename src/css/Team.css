@@ -170,7 +170,7 @@
 }
 
 .team-focus {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.55;
   margin: 8px 0 0 0;
 }
@@ -213,7 +213,7 @@
 
 .team-bio-arrow {
   color: #ca1b28;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .team-social {
@@ -319,6 +319,6 @@
   }
 
   .team-focus {
-    font-size: 13px;
+    font-size: 16px;
   }
 }

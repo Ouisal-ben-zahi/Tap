@@ -1,6 +1,5 @@
 import React from 'react';
 import '../css/TalentSection.css';
-import bgSections from "../assets/bgsections.jpg";
 
 const TalentSection = () => {
   const steps = [
@@ -13,7 +12,7 @@ const TalentSection = () => {
   return (
     <section 
       className="main-section" 
-      style={{ backgroundImage: `url(${bgSections})` }}
+     
     >
       <div className="content-container">
         <h2 className="main-title">COMMENT ÇA MARCHE</h2>

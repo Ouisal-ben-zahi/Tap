@@ -33,7 +33,7 @@ function Contact() {
               name="_subject"
               value="Nouveau message depuis le site TAP"
             />
-            <div className="form-row form-row-full">
+            <div className="form-row">
               <div className="form-field">
                 <label htmlFor="name">Nom et prénom</label>
                 <input
@@ -44,9 +44,6 @@ function Contact() {
                   required
                 />
               </div>
-            </div>
-
-            <div className="form-row form-row-three">
               <div className="form-field">
                 <label htmlFor="email">E-mail</label>
                 <input
@@ -57,6 +54,9 @@ function Contact() {
                   required
                 />
               </div>
+            </div>
+
+            <div className="form-row">
               <div className="form-field">
                 <label htmlFor="company">Entreprise (facultatif)</label>
                 <input
