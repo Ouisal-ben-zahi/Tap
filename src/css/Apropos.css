@@ -53,10 +53,15 @@
   animation: aboutFadeInUp 0.8s ease-out forwards;
 }
 
-.about-eyebrow-tag {
+.tag.about-eyebrow-tag {
   display: inline-flex;
+  align-items: center;
   width: auto;
+  height: 32px;
+  min-height: 32px;
   margin: 0 0 12px 0;
+  padding: 0 12px 0 20px;
+  font-size: 0.7rem;
 }
 
 .about-header h1 {

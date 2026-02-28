@@ -30,11 +30,16 @@
   margin: 0 auto 40px;
 }
 
-/* Même design que .tag .tag-inner (PourquoiTap) */
-.team-eyebrow-tag {
+/* Même design que .tag .tag-inner (PourquoiTap), hauteur réduite */
+.tag.team-eyebrow-tag {
   display: inline-flex;
+  align-items: center;
   width: auto;
+  height: 32px;
+  min-height: 32px;
   margin-bottom: 12px;
+  padding: 0 12px 0 20px;
+  font-size: 0.7rem;
 }
 
 .team-header h1 {
