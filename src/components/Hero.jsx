@@ -1,17 +1,9 @@
 import React from "react";
 import "../css/Hero.css";
-import heroImage from "../assets/herobgacc.jpeg";
 
 const Hero = () => {
   return (
     <section className="hero">
-      <img
-        src={heroImage}
-        alt=""
-        className="hero-bg-img"
-      />
-      <div className="hero-overlay" />
-
       <div className="hero-content">
         <div className="hero-content-inner">
         <h1>
