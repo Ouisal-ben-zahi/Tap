@@ -112,11 +112,24 @@
   padding: 0;
 }
 
-.contact-block span {
+.contact-block span,
+.contact-block .contact-link {
   font-size: 16px;
   font-weight: 400;
-  margin: 0; /* Pas de marge */
+  margin: 0;
   padding: 0;
+}
+
+.contact-block .contact-link {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s, text-decoration 0.2s;
+}
+
+.contact-block .contact-link:hover {
+  color: #e01f26;
+  text-decoration: underline;
 }
 
 .footer-copyright {

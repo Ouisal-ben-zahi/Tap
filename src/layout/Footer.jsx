@@ -9,6 +9,16 @@ const Footer = () => {
     setOpenColumn((prev) => (prev === id ? null : id));
   };
 
+  const openMail = (e) => {
+    e.preventDefault();
+    window.location.href = "mailto:tap@entrepreneursmorocco.com";
+  };
+
+  const openPhone = (e) => {
+    e.preventDefault();
+    window.location.href = "tel:+21277686816376";
+  };
+
   return (
     <footer className="footer-container">
       <div className="footer-inner">
@@ -73,20 +83,24 @@ const Footer = () => {
             <div className="footer-column-content">
               <div className="contact-block">
                 <strong>Email</strong>
-                <span>contact@tap.ai</span>
+                <a href="mailto:tap@entrepreneursmorocco.com" className="contact-link" onClick={openMail}>tap@entrepreneursmorocco.com</a>
               </div>
               <div className="contact-block">
                 <strong>Téléphone</strong>
-                <span>+212 6 00 00 00 00</span>
+                <a href="tel:+21277686816376" className="contact-link" onClick={openPhone}>+212 776 86 81 63 76</a>
               </div>
               <div className="contact-block">
                 <strong>Adresse</strong>
-                <span>Maroc</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Immeuble+STAVROULA+gueliz+route+Av+4ème+D.M.M.+Marrakesh+4000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="contact-link"
+                >
+                  à Camp militaire, Immeuble STAVROULA , gueliz route de, Av. 4ème D.M.M., Marrakesh 4000
+                </a>
               </div>
-              <div className="contact-block">
-                <strong>Support</strong>
-                <span>support@tap.ai</span>
-              </div>
+              
             </div>
           </div>
         </div>
