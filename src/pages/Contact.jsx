@@ -1,6 +1,5 @@
 import React from "react";
 import "../css/Contact.css";
-import "../css/PourquoiTap.css";
 import heroImage from "../assets/bgpages.jpg";
 
 function Contact() {
@@ -11,13 +10,13 @@ function Contact() {
     >
       <div className="contact-inner">
         <header className="contact-header">
-          <div className="tag contact-eyebrow-tag">
-            <span className="tag-inner">CONTACT</span>
+          <div className="contact-heading">
+            <div className="contact-heading-main">CONTACT</div>
+            <div className="contact-heading-sub">PARLONS DE VOTRE PROJET</div>
           </div>
-          <h2>PARLONS DE VOTRE PROJET</h2>
           <p>
-            Une question, un besoin de recrutement ou l’envie de tester TAP&nbsp;? Envoyez-nous
-            un message, nous revenons vers vous rapidement.
+            Une question, un besoin de recrutement ou l’envie de tester TAP ?<br />
+            Envoyez-nous un message, nous revenons vers vous rapidement.
           </p>
         </header>
 
@@ -33,6 +32,7 @@ function Contact() {
               name="_subject"
               value="Nouveau message depuis le site TAP"
             />
+
             <div className="form-row">
               <div className="form-field">
                 <label htmlFor="name">Nom et prénom</label>
@@ -78,20 +78,22 @@ function Contact() {
               </div>
             </div>
 
-            <div className="form-field">
+            <div className="form-field form-field-full">
               <label htmlFor="message">Message</label>
               <textarea
                 id="message"
                 name="message"
-                rows="5"
+                rows="6"
                 placeholder="Expliquez-nous votre besoin ou votre projet."
                 required
               />
             </div>
 
-            <button type="submit" className="contact-submit">
-              ENVOYER LE MESSAGE
-            </button>
+            <div className="contact-submit-wrapper">
+              <button type="submit" className="contact-submit">
+                ENVOYER LE MESSAGE
+              </button>
+            </div>
           </form>
         </div>
       </div>
