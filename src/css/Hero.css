@@ -9,6 +9,20 @@
   background: transparent;
 }
 
+.hero-map {
+  position: absolute;
+  right: 0%;
+  bottom: 0;
+  max-height: 95vh;
+  max-width: 85%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: right bottom;
+  z-index: 1;
+  pointer-events: none;
+}
+
 .hero-content {
   position: absolute;
   inset: 0;

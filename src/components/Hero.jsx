@@ -1,9 +1,11 @@
 import React from "react";
 import "../css/Hero.css";
+import africaMap from "../assets/Africa-Map.png";
 
 const Hero = () => {
   return (
     <section className="hero">
+      <img src={africaMap} alt="" className="hero-map" aria-hidden />
       <div className="hero-content">
         <div className="hero-content-inner">
         <h1>
