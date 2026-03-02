@@ -21,6 +21,7 @@
   object-position: right bottom;
   z-index: 1;
   pointer-events: none;
+  opacity: 0.28;
 }
 
 .hero-content {

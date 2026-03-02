@@ -11,43 +11,62 @@ import "../css/PourquoiTap.css"
 const founders = [
   {
     name: "Imad El Boukhiari",
-    role: "Co‑Founder",
-    focus:
-      "Co‑fondateur de TAP, Imad pilote la vision globale de la plateforme et le déploiement stratégique auprès des entreprises et partenaires. Entrepreneur engagé, il orchestre les partenariats clés et s’assure que TAP reste alignée sur les enjeux du marché de l’emploi et de l’upskilling.",
+    role: "Co‑Founder & CEO",
     avatar: imadAvatar,
+    focusItems: [
+      "Expert en IA (LLM) & systèmes intelligents",
+      "Spécialiste blockchain & finance décentralisée",
+      "Conception scoring & matching intelligent",
+      "Vision produit & stratégie technologique TAP",
+    ],
   },
   {
-    name: "zakaria Ajmil",
-    role: "Co‑Founder",
-    focus:
-      "Co‑fondateur de TAP, Zakaria est le garant de l’exécution opérationnelle et de la qualité d’expérience pour les talents comme pour les recruteurs. Il veille à ce que chaque fonctionnalité soit concrètement utile, mesurable et fidèle à l’ambition d’excellence de TAP.",
+    name: "Zakaria Ajmil",
+    role: "Co‑Founder & COO",
     avatar: zakariaAvatar,
+    focusItems: [
+      "Professeur d’économie",
+      "Expert en marketing & communication stratégique",
+      "Structuration acquisition & activation marché",
+      "Déploiement partenariats universités & entreprises",
+    ],
   },
 ];
 
 const teamMembers = [
   {
-    name: "Ouissal Ben Zahi",
-    role: "Lead Full‑Stack",
-    avatar: ouissalAvatar,
-    focus:
-      "Lead Full‑Stack au cœur du produit TAP, Ouissal conçoit et développe l’architecture de la plateforme, du front à l’infrastructure backend. Elle s’assure que chaque parcours utilisateur soit fluide, robuste et prêt à évoluer à grande échelle.",
-  },
-  {
-    name: "Ayoub Zouani",
-    role: "Product Designer UI/UX",
-    avatar: jawharAvatar,
-    focus:
-      "Product Designer UI/UX, Ayoub façonne l’identité visuelle de TAP et conçoit des interfaces exigeantes mais accessibles. Son objectif : créer une expérience claire, esthétique et rassurante, qui valorise le parcours des talents et la marque employeur des entreprises.",
-  },
-  {
     name: "Hajar El Aouni",
     role: "AI Product Lead",
     avatar: hajarAvatar,
-    focus:
-      "AI Product Lead, Hajar imagine et pilote les expériences guidées par l’IA au sein de TAP. Elle travaille à transformer les données en recommandations concrètes pour aider chaque talent à mieux se positionner, monter en compétences et gagner en employabilité.",
-  }
-  
+    focusItems: [
+      "Intégration modèles IA & LLM",
+      "Optimisation scoring & matching",
+      "Structuration logique produit IA",
+      "Amélioration continue des performances",
+    ],
+  },
+  {
+    name: "Ouissal Ben Zahi",
+    role: "Lead Full‑Stack Developer",
+    avatar: ouissalAvatar,
+    focusItems: [
+      "Architecture backend & API",
+      "Déploiement cloud & scalabilité",
+      "Sécurisation & gestion des données",
+      "Intégration IA côté infrastructure",
+    ],
+  },
+  {
+    name: "Ayoub Zouani",
+    role: "Product Designer (UI/UX)",
+    avatar: jawharAvatar,
+    focusItems: [
+      "Expérience utilisateur candidat & recruteur",
+      "Design system & interfaces scalables",
+      "Optimisation adoption & conversion",
+      "Cohérence visuelle & fluidité parcours",
+    ],
+  },
 ];
 
 function Team() {
@@ -107,8 +126,14 @@ function Team() {
                     </div>
                   </div>
 
-                  {member.focus && (
-                    <p className="team-focus">{member.focus}</p>
+                  {Array.isArray(member.focusItems) && member.focusItems.length > 0 && (
+                    <div className="team-focus-multi">
+                      {member.focusItems.map((item) => (
+                        <p key={item} className="team-focus-line">
+                          {item}
+                        </p>
+                      ))}
+                    </div>
                   )}
                 </div>
               </article>

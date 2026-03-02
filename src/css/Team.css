@@ -48,6 +48,8 @@
   font-weight: 400;
   text-transform: uppercase;
   margin: 0 0 18px 0;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .team-header p {
@@ -178,6 +180,30 @@
   font-size: 16px;
   line-height: 1.55;
   margin: 8px 0 0 0;
+}
+
+.team-focus-multi {
+  margin: 8px 0 0 0;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.team-focus-line {
+  position: relative;
+  margin: 0 0 4px 0;
+  padding-left: 16px;
+}
+
+.team-focus-line::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.75em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ca1b28;
+  transform: translateY(-50%);
 }
 
 .team-card-footer {
