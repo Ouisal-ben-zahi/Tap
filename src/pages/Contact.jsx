@@ -11,8 +11,8 @@ function Contact() {
       <div className="contact-inner">
         <header className="contact-header">
           <div className="contact-heading">
-            <div className="contact-heading-main">CONTACT</div>
-            <div className="contact-heading-sub">PARLONS DE VOTRE PROJET</div>
+            <div className="contact-heading-sub">CONTACT</div>
+            <div className="contact-heading-main">PARLONS DE VOTRE PROJET</div>
           </div>
           <p>
             Une question, un besoin de recrutement ou l’envie de tester TAP ?<br />
