@@ -13,6 +13,8 @@ const founders = [
     name: "Imad El Boukhiari",
     role: "Co‑Founder & CEO",
     avatar: imadAvatar,
+    linkedinUrl:
+      "https://communik-agence.slack.com/archives/D0964BMSFDX/p1772538933409959",
     focusItems: [
       "Expert en IA (LLM) & systèmes intelligents",
       "Spécialiste blockchain & finance décentralisée",
@@ -24,6 +26,8 @@ const founders = [
     name: "Zakaria Ajmil",
     role: "Co‑Founder & COO",
     avatar: zakariaAvatar,
+    linkedinUrl:
+      "https://communik-agence.slack.com/archives/D0964BMSFDX/p1772538949427899",
     focusItems: [
       "Professeur d’économie",
       "Expert en marketing & communication stratégique",
@@ -38,6 +42,8 @@ const teamMembers = [
     name: "Hajar El Aouni",
     role: "AI Product Lead",
     avatar: hajarAvatar,
+    linkedinUrl:
+      "https://communik-agence.slack.com/archives/D09SH22HYJC/p1772538959242339",
     focusItems: [
       "Intégration modèles IA & LLM",
       "Optimisation scoring & matching",
@@ -49,6 +55,7 @@ const teamMembers = [
     name: "Ouissal Ben Zahi",
     role: "Lead Full‑Stack Developer",
     avatar: ouissalAvatar,
+    linkedinUrl: "https://www.linkedin.com/in/ouissal-ben-zahi/",
     focusItems: [
       "Architecture backend & API",
       "Déploiement cloud & scalabilité",
@@ -57,9 +64,11 @@ const teamMembers = [
     ],
   },
   {
-    name: "Ayoub Zouani",
+    name: "Juwher",
     role: "Product Designer (UI/UX)",
     avatar: jawharAvatar,
+    linkedinUrl:
+      "https://communik-agence.slack.com/archives/D0964BMSFDX/p1772538967387659",
     focusItems: [
       "Expérience utilisateur candidat & recruteur",
       "Design system & interfaces scalables",
@@ -121,7 +130,17 @@ function Team() {
                       <h2>{member.name}</h2>
                       <p className="team-role">{member.role}</p>
                     </div>
-                    <span className="team-linkedin-icon">in</span>
+                    {member.linkedinUrl && (
+                      <a
+                        href={member.linkedinUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="team-linkedin-icon"
+                        aria-label={`Profil LinkedIn de ${member.name}`}
+                      >
+                        in
+                      </a>
+                    )}
                   </div>
 
                   {Array.isArray(member.focusItems) && member.focusItems.length > 0 && (
