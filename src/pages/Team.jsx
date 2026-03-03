@@ -81,17 +81,18 @@ function Team() {
 
       <div className="team-inner">
         <header className="team-header">
-          <div className="tag team-eyebrow-tag"><span className="tag-inner">L&apos;ÉQUIPE TAP</span></div>
-          
-          <h1>
-            Une équipe fondatrice et opérationnelle réunie autour d&apos;une
-            ambition commune&nbsp;: élever les standards de l&apos;employabilité.
-          </h1>
-          <p>
-            TAP est portée par deux co‑fondateurs et une équipe cœur mêlant
-            produit, IA, design et ingénierie, pour concevoir une expérience à
-            la fois exigeante, fluide et profondément utile aux talents comme
-            aux entreprises.
+          <div className="team-heading">
+            <div className="team-heading-main">L&apos;ÉQUIPE TAP</div>
+            <div className="team-heading-sub">
+              Une équipe fondatrice et opérationnelle réunie autour d&apos;une ambition commune&nbsp;:
+              <br />
+              élever les standards de l&apos;employabilité.
+            </div>
+          </div>
+          <p className="team-intro">
+            TAP est portée par deux co‑fondateurs et une équipe cœur mêlant produit, IA, design et
+            ingénierie, pour concevoir une expérience à la fois exigeante, fluide et profondément
+            utile aux talents comme aux entreprises.
           </p>
         </header>
 
@@ -119,10 +120,6 @@ function Team() {
                     <div>
                       <h2>{member.name}</h2>
                       <p className="team-role">{member.role}</p>
-                    </div>
-                    <div className="team-social">
-                      <span className="team-social-icon">in</span>
-                      <span className="team-social-icon">@</span>
                     </div>
                   </div>
 
