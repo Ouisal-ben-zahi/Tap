@@ -5,7 +5,7 @@ const TalentSection = () => {
   const steps = [
     { id: "01", text: "LE CANDIDAT CRÉE SON PROFIL" },
     { id: "02", text: "L'IA ANALYSE ET IDENTIFIE LES ÉCARTS" },
-    { id: "05", text: "TAP AIDE À AMÉLIORER LE NIVEAU" },
+    { id: "03", text: "TAP AIDE À AMÉLIORER LE NIVEAU" },
     { id: "04", text: "LE PROFIL DEVIENT VISIBLE AUX ENTREPRISES" },
   ];
 

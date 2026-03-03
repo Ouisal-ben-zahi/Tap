@@ -20,15 +20,18 @@
 }
 
 .contact-header {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto 40px auto;
   text-align: center;
   color: #f5f5f5;
-  margin-bottom: 40px;
 }
 
 .contact-heading {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   margin: 0 auto 24px auto;
 }
 
@@ -36,12 +39,10 @@
   background-color:    #f5f5f5;
   color: black;
   padding: 10px 0;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   text-transform: uppercase;
-
-  min-width: 560px;
-  max-width: 90vw;
+  width: 100%;
   text-align: center;
 }
 
@@ -49,12 +50,10 @@
   background-color: #e01f26;
   color: white;
   padding: 8px 0;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
   text-transform: uppercase;
-
-  min-width: 800px;
-  max-width: 80vw;
+  width: 100%;
   text-align: center;
 }
 

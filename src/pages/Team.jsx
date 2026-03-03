@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/Team.css";
-import heroImage from "../assets/bgpages.jpg";
+import heroImage from "../assets/new-bgpages.jpg";
 import imadAvatar from "../assets/imad-el-boukhiari.png";
 import zakariaAvatar from "../assets/zakaria-Ajmil.png";
 import hajarAvatar from "../assets/Hajar-el-aouni.jpg";
@@ -86,8 +86,6 @@ function Team() {
       className="team-section"
       style={{ backgroundImage: `url(${heroImage})` }}
     >
-      <div className="team-overlay" />
-
       <div className="team-inner">
         <header className="team-header">
           <div className="team-heading">

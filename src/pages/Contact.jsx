@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/Contact.css";
-import heroImage from "../assets/bgpages.jpg";
+import heroImage from "../assets/new-bgpages.jpg";
 
 function Contact() {
   return (
