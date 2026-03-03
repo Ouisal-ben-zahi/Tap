@@ -117,10 +117,11 @@ function Team() {
                 </div>
                 <div className="team-card-body">
                   <div className="team-card-header">
-                    <div>
+                    <div className="team-name-block">
                       <h2>{member.name}</h2>
                       <p className="team-role">{member.role}</p>
                     </div>
+                    <span className="team-linkedin-icon">in</span>
                   </div>
 
                   {Array.isArray(member.focusItems) && member.focusItems.length > 0 && (
