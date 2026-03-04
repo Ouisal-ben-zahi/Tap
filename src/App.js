@@ -6,6 +6,7 @@ import Home from "./pages/Accueil";
 import About from "./pages/Apropos";
 import Team from "./pages/Team";
 import Blog from "./pages/Blog";
+import Connexion from "./pages/Connexion";
 import Contact from "./pages/Contact";
 import Footer from './layout/Footer';
 import CountdownPopup from "./components/CountdownPopup";
@@ -25,6 +26,7 @@ function App() {
           <Route path="/a-propos" element={<About />} />
           <Route path="/team" element={<Team />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/connexion" element={<Connexion />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>

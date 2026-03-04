@@ -165,6 +165,26 @@
   background-color: #c01822;
 }
 
+.login-create-account {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-create-account-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 14px;
+  color: #e01f26;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login-create-account-link:hover {
+  color: #e01f26;
+}
+
 /* ── Mobile ── */
 @media (max-width: 768px) {
   .contact-section {

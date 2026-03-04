@@ -89,7 +89,13 @@ const Header = () => {
 
           {/* Boutons visibles en mobile dans le menu */}
           <div className="nav-buttons-mobile">
-            <button className="login-btn" onClick={() => setMenuOpen(false)}>
+            <button
+              className="login-btn"
+              onClick={() => {
+                setMenuOpen(false);
+                navigate("/connexion");
+              }}
+            >
               Se connecter
             </button>
             <button
@@ -103,7 +109,7 @@ const Header = () => {
 
         {/* Buttons (desktop) */}
         <div className="header-buttons">
-          <button className="login-btn">
+          <button className="login-btn" onClick={() => navigate("/connexion")}>
             Se connecter
           </button>
 
