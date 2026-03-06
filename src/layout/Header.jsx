@@ -100,7 +100,7 @@ const Header = () => {
             </button>
             <button
               className="signup-btn"
-              onClick={() => { setMenuOpen(false); navigate("/"); }}
+              onClick={() => { setMenuOpen(false); navigate("/creer-compte"); }}
             >
               Créer mon profil
             </button>
@@ -115,7 +115,7 @@ const Header = () => {
 
           <button 
             className="signup-btn"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/creer-compte")}
           >
             Créer mon profil
           </button>

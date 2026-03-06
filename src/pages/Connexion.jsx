@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/Contact.css";
 import heroImage from "../assets/new-bgpages.jpg";
 
 function Connexion() {
+  const [showPassword, setShowPassword] = useState(false);
   return (
     <section
       className="contact-section"
@@ -30,13 +31,24 @@ function Connexion() {
 
             <div className="form-field form-field-full">
               <label htmlFor="login-password">Mot de passe</label>
-              <input
-                id="login-password"
-                type="password"
-                name="password"
-                placeholder="Votre mot de passe"
-                required
-              />
+              <div className="password-input-wrapper">
+                <input
+                  id="login-password"
+                  className="password-input"
+                  type={showPassword ? "text" : "password"}
+                  name="password"
+                  placeholder="Votre mot de passe"
+                  required
+                />
+                <button
+                  type="button"
+                  className={
+                    "password-eye" + (showPassword ? " password-eye--active" : "")
+                  }
+                  onClick={() => setShowPassword((prev) => !prev)}
+                  aria-label={showPassword ? "Masquer le mot de passe" : "Afficher le mot de passe"}
+                />
+              </div>
             </div>
 
             <div className="contact-submit-wrapper">
